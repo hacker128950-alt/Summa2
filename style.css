@@ -1,0 +1,471 @@
+/* ==========================
+   GOOGLE FONT LOOK
+========================== */
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    margin:0;
+    padding:0;
+
+    overflow-x:hidden;
+
+    background:
+    linear-gradient(
+    135deg,
+    #fffdfb,
+    #faf6f2,
+    #f7f1eb,
+    #fffdfb);
+
+    min-height:100vh;
+
+    color:#5d5348;
+
+    position:relative;
+}
+
+/* ==========================
+   LUXURY FLOATING LIGHTS
+========================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:600px;
+    height:600px;
+
+    background:
+    radial-gradient(
+    circle,
+    rgba(255,220,220,.6),
+    transparent 70%);
+
+    top:-250px;
+    left:-150px;
+
+    filter:blur(60px);
+
+    animation:floatOne 15s infinite alternate;
+
+    z-index:-2;
+}
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:700px;
+    height:700px;
+
+    background:
+    radial-gradient(
+    circle,
+    rgba(255,240,220,.5),
+    transparent 70%);
+
+    bottom:-300px;
+    right:-200px;
+
+    filter:blur(80px);
+
+    animation:floatTwo 18s infinite alternate;
+
+    z-index:-2;
+}
+
+@keyframes floatOne{
+
+    from{
+        transform:
+        translate(0,0);
+    }
+
+    to{
+        transform:
+        translate(250px,150px);
+    }
+}
+
+@keyframes floatTwo{
+
+    from{
+        transform:
+        translate(0,0);
+    }
+
+    to{
+        transform:
+        translate(-250px,-150px);
+    }
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px;
+}
+
+/* ==========================
+   PREMIUM GLASS CARD
+========================== */
+
+.glass-card{
+
+    background:
+    rgba(255,255,255,.35);
+
+    border:
+    1px solid rgba(255,255,255,.7);
+
+    backdrop-filter:
+    blur(30px);
+
+    -webkit-backdrop-filter:
+    blur(30px);
+
+    border-radius:35px;
+
+    padding:40px;
+
+    max-width:900px;
+
+    margin:auto;
+
+    box-shadow:
+
+    0 8px 32px
+    rgba(0,0,0,.08),
+
+    inset 0 1px 1px
+    rgba(255,255,255,.9);
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.glass-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-200%;
+
+    width:70%;
+    height:100%;
+
+    background:
+
+    linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.6),
+    transparent);
+
+    transform:
+    skewX(-25deg);
+
+    animation:
+    shine 7s infinite;
+}
+
+@keyframes shine{
+
+    100%{
+        left:250%;
+    }
+}
+
+/* ==========================
+   TITLES
+========================== */
+
+.main-title,
+.couple-name,
+footer h3{
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    color:#8b6b52;
+}
+
+.main-title{
+
+    font-size:4rem;
+}
+
+.couple-name{
+
+    font-size:3.5rem;
+}
+
+h2{
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    color:#8b6b52;
+
+    font-size:3rem;
+
+    text-align:center;
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.open-btn,
+.location-btn{
+
+    background:
+    linear-gradient(
+    135deg,
+    #e8d8c3,
+    #d8bfa8);
+
+    border:none;
+
+    padding:
+    14px 35px;
+
+    border-radius:50px;
+
+    color:#5d5348;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.4s;
+}
+
+.open-btn:hover,
+.location-btn:hover{
+
+    transform:
+    translateY(-5px);
+
+    box-shadow:
+    0 10px 25px
+    rgba(0,0,0,.1);
+}
+
+/* ==========================
+   COUNTDOWN
+========================== */
+
+#countdown{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+}
+
+.time-box{
+
+    width:140px;
+    height:140px;
+
+    border-radius:25px;
+
+    background:
+    rgba(255,255,255,.4);
+
+    backdrop-filter:
+    blur(20px);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:
+    0 5px 20px
+    rgba(0,0,0,.06);
+}
+
+.time-box span{
+
+    font-size:2.8rem;
+
+    color:#8b6b52;
+
+    font-weight:bold;
+}
+
+/* ==========================
+   VIDEO
+========================== */
+
+.video-box{
+
+    max-width:900px;
+
+    margin:auto;
+}
+
+.video-box video{
+
+    width:100%;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 15px 40px
+    rgba(0,0,0,.12);
+}
+
+/* ==========================
+   HEART
+========================== */
+
+.heart,
+.couple-heart{
+
+    font-size:2rem;
+
+    animation:
+    pulse 2s infinite;
+    allign: center;
+}
+
+@keyframes pulse{
+
+    50%{
+        transform:scale(1.2);
+    }
+}
+
+/* ==========================
+   SECTIONS
+========================== */
+
+section{
+
+    padding:
+    80px 20px;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+
+    text-align:center;
+
+    padding:80px 20px;
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:768px){
+
+    .main-title{
+
+        font-size:2.8rem;
+    }
+
+    .couple-name{
+
+        font-size:2.4rem;
+    }
+
+    h2{
+
+        font-size:2.2rem;
+    }
+
+    .time-box{
+
+        width:110px;
+        height:110px;
+    }
+}
+#invitationContent{
+
+    display:none;
+
+    opacity:0;
+}
+
+.hero{
+
+    transition:all 1.2s ease;
+}
+
+.open-btn{
+
+    transition:.4s;
+}
+
+.open-btn:hover{
+
+    transform:
+    translateY(-5px)
+    scale(1.05);
+
+    box-shadow:
+    0 15px 35px
+    rgba(0,0,0,.15);
+}
+.open-btn{
+    outline:none;
+    border:none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.open-btn:focus{
+    outline:none;
+    box-shadow:none;
+}
+
+.open-btn:active{
+    outline:none;
+    box-shadow:none;
+}
+
+button{
+    -webkit-tap-highlight-color: transparent;
+}
+.hero-card{
+
+    opacity:1 !important;
+
+    transform:none !important;
+
+    animation:none !important;
+}
